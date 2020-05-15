@@ -83,7 +83,7 @@ console.log(temperatureCtoF(24));
 */
 function temperatureInF(temp, unit) {
   if (unit ==='c'){
-  return console.log(temperatureCtoF) + 'F';
+  return console.log(temperatureCtoF(temp)) + 'F';
   }
   else if (unit === 'f'){
     return temp + 'F';
@@ -109,9 +109,12 @@ console.log(temperatureInF(24,'c'));
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(id, name, email){
+  return {id, name, email
+  };
 }
+console.log(makePersonObject(5, 'Leia', 'leia@leia.com'));
+
 
 /**
  * ### Challenge `getName`
@@ -126,9 +129,11 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+
+function getName({id, name, email}) {
+  return `Hello, my name is ${name}`;
 }
+console.log(getName({ id:1, name:'Leia', email:'leia@leia.com' }));
 
 
 /**
@@ -146,9 +151,16 @@ function getName(/* code here */) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
-}
+
+
+// function appleIndex(fruits) {
+//   let fruits = ['orange', 'grape', 'apple', 'banana', 'mango'];
+//   return fruits[2];
+// }
+
+// console.log(appleIndex('apple'));
+
+
 
 /**
  * ### Challenge `isItAnApple`
@@ -165,9 +177,7 @@ function appleIndex(/* code here */) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
-}
+
 
 
 
@@ -222,9 +232,8 @@ function get3rdCar(inventory) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoByIndex(inventory, index) {
-  /* code here */
-}
+
+
 
 /**
  * ### Challenge `getLastCarInfo`
